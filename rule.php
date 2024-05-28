@@ -93,25 +93,65 @@ class quizaccess_proctoring extends mod_quiz\local\access_rule_base {
         if ($faceidcheck == '1') {
             $html = "<div class='container'>
                         <div class='row'>
-                            <div class='col'>$header</div>
+                            <div class='col'>* $header</div>
                         </div>
                         <div class='row'>
-                            <div class='col'>$proctoringstatement</div>
+                            <div class='col'>* $proctoringstatement</div>
                         </div>
+
+
                         <div class='row'>
-                            <div class='col'>$camhtml</div>
+                            <div class='col'>
+
+                        <div class='container-fluid'>
+                                    <div class='row justify-content-center align-items-center'>
+                                        <div class='col-12' style='
+                                            background-color: #f0f0f0;
+                                            border: 1px solid #ccc;
+                                            border-radius: 4px;
+                                            overflow: hidden;
+                                            padding: 5px;
+                                        '>
+                                            <video class='img-fluid' id='video' style='background-color: black;'>Video stream not available.</video>
+                                        </div>
+                                    </div>
+                                </div>
+                        <canvas style='display: none;' id='canvas'></canvas>
+                        <img style='display: none; max-width: 100%; height: auto; margin-top: 20px;' id='photo' alt='The screen capture will appear in this box.' />
+
+                            
+                            </div>
                         </div>
                     </div>";
         } else {
             $html = "<div class='container'>
                         <div class='row'>
-                            <div class='col'>$header</div>
+                            <div class='col'>* $header</div>
                         </div>
                         <div class='row'>
-                            <div class='col'>$proctoringstatement</div>
+                            <div class='col'>* $proctoringstatement</div>
                         </div>
                         <div class='row'>
-                            <div class='col'>$camhtml</div>
+                            <div class='col'>
+
+                            <div class='container-fluid'>
+                            <div class='row justify-content-center align-items-center'>
+                                <div class='col-12' style='
+                                    background-color: #f0f0f0;
+                                    border: 2px solid black;
+                                    border-radius: 4px;
+                                    overflow: hidden;
+                                    padding: 5px;
+                                '>
+                                <video class='img-fluid' id='video' style='background-color: black; max-width: 100%; height: auto;'>Video stream not available.</video>
+
+                                </div>
+                            </div>
+                        </div>
+                <canvas style='display: none;' id='canvas'></canvas>
+                <img style='display: none; max-width: 100%; height: auto; margin-top: 20px;' id='photo' alt='The screen capture will appear in this box.' />
+                        
+                            </div>
                         </div>
                     </div>";
         }
